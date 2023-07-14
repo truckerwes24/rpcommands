@@ -1,9 +1,3 @@
---RegisterCommand('me', function(source, args, rawCommand)
---    if (source > 0) then
---        local message = table.concat(args, " ", 1)
---        TriggerClientEvent('sendProximityMessageMe',  -1, source, GetPlayerName(source), message)
---end)
-
 RegisterCommand('me', function(source, args, user)
     local name = GetPlayerName(source)
     TriggerClientEvent("sendProximityMessageMe", -1, source, name, table.concat(args, " "))
